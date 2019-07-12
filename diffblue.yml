@@ -1,4 +1,4 @@
-buildCmd: cd "./examples"; ./gradlew build
+buildCmd: cd "./rejoiner"; mvn compile
 testCmd: true
 skipVerification: true
 cbmcArguments:
@@ -173,3 +173,76 @@ phases:
       cover-function-only: false
       # instrument the file as opposed to the function only
       cover-only: file
+units:
+ - target:
+   - dir: target/classes
+     file: com/google/api/graphql/GraphqlError.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/GraphqlError.java
+   - dir: target/classes
+     file: com/google/api/graphql/SourceLocation.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/SourceLocation.java
+   - dir: target/classes
+     file: com/google/api/graphql/GraphqlError$Builder.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/GraphqlError.java
+   - dir: target/classes
+     file: com/google/api/graphql/SourceLocationOrBuilder.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/SourceLocationOrBuilder.java
+   - dir: target/classes
+     file: com/google/api/graphql/GraphqlError$1.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/GraphqlError.java
+   - dir: target/classes
+     file: com/google/api/graphql/ErrorType.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/ErrorType.java
+ - target:
+   - dir: target/classes
+     file: com/google/api/graphql/SourceLocation.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/SourceLocation.java
+   - dir: target/classes
+     file: com/google/api/graphql/SourceLocation$Builder.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/SourceLocation.java
+   - dir: target/classes
+     file: com/google/api/graphql/SourceLocation$1.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/SourceLocation.java
+ - target:
+   - dir: target/classes
+     file: com/google/api/graphql/rejoiner/Type.class
+     sourceDir: src/main/java
+     sourceFile: com/google/api/graphql/rejoiner/Type.java
+   - dir: target/classes
+     file: com/google/api/graphql/rejoiner/Type$ModifiableType.class
+     sourceDir: src/main/java
+     sourceFile: com/google/api/graphql/rejoiner/Type.java
+   - dir: target/classes
+     file: com/google/api/graphql/rejoiner/ProtoToGql.class
+     sourceDir: src/main/java
+     sourceFile: com/google/api/graphql/rejoiner/ProtoToGql.java
+ - target:
+   - dir: target/classes
+     file: com/google/api/graphql/options/RelayOptionsProto$RelayFieldOptions.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/options/RelayOptionsProto.java
+   - dir: target/classes
+     file: com/google/api/graphql/options/RelayOptionsProto$RelayFieldOptions$1.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/options/RelayOptionsProto.java
+   - dir: target/classes
+     file: com/google/api/graphql/options/RelayOptionsProto$1.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/options/RelayOptionsProto.java
+   - dir: target/classes
+     file: com/google/api/graphql/options/RelayOptionsProto$RelayFieldOptions$Builder.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/options/RelayOptionsProto.java
+   - dir: target/classes
+     file: com/google/api/graphql/options/RelayOptionsProto.class
+     sourceDir: target/generated-sources/protobuf/java
+     sourceFile: com/google/api/graphql/options/RelayOptionsProto.java
